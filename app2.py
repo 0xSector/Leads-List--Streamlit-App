@@ -28,9 +28,9 @@ Metrics = {
 
 
     'NFT Lending Users': {     
-        # 'Total NFT Holders': 'TBD',    
-        # 'Total NFT Borrowers': 'TBD',
-        'Total Users': '222,825',
+        'Total NFT Holders': '222,825',    
+        'Total NFT Borrowers': '8,484',
+        #'Total Users': '222,825',
         'Total Fees Generated': '$1.8m',
         'Estimated Profit Margin': '90%',   
         'Average Value/Lead': 'TBD', 
@@ -51,13 +51,6 @@ def main():
         initial_sidebar_state='expanded'
     )
 
-    # # Title
-    # st.markdown("<h1 style='text-align: center;'>Example Leads</h1>", unsafe_allow_html=True)
-
-    # Title
-    # title_style = "text-align: center; font-family: 'Roboto'; font-weight: bold; color: #000000;"
-    # st.markdown(f"<h1 style='{title_style}'>Start More Conversations, Close More Deals</h1>", unsafe_allow_html=True)
-
     title_style = "text-align: center; font-family: 'Roboto'; font-weight: bold; color: #000000;"
     st.markdown(f"<h1 style='{title_style}'>On-chain Leads</h1>", unsafe_allow_html=True)
     
@@ -72,8 +65,8 @@ def main():
     # Create a dropdown selector in the sidebar
     table_selection = st.sidebar.selectbox('Select Database', list(tables.keys()))
 
-    cols_titles = ['Total Users', 'Total Fees Generated', 'Average Value/Lead', 'Estimated Profit Margin', 'Starting Pricing']
-    cols_data = [Metrics.get(table_selection,{}).get('Total Users','NA'), Metrics.get(table_selection,{}).get('Total Fees Generated','NA'), Metrics.get(table_selection,{}).get('Average Value/Lead','NA'), Metrics.get(table_selection,{}).get('Estimated Profit Margin','NA'), Metrics.get(table_selection,{}).get('Starting Pricing','NA')]
+    cols_titles = ['Total NFT Holders', 'Total NFT Borrowers': '8,484', 'Total Fees Generated', 'Average Value/Lead', 'Estimated Profit Margin', 'Starting Pricing']
+    cols_data = [Metrics.get(table_selection,{}).get('Total NFT Holders','NA'), Metrics.get(table_selection,{}).get('Total NFT Borrowers','NA'), Metrics.get(table_selection,{}).get('Total Fees Generated','NA'), Metrics.get(table_selection,{}).get('Average Value/Lead','NA'), Metrics.get(table_selection,{}).get('Estimated Profit Margin','NA'), Metrics.get(table_selection,{}).get('Starting Pricing','NA')]
     #cols_titles = ['Total Wallets Tracked', 'Leads Available', 'Fees Generated', 'Trades Completed']
     #cols_data = [Metrics.get(table_selection,{}).get('Total Wallets Tracked','NA'), Metrics.get(table_selection,{}).get('Leads Available','NA'), Metrics.get(table_selection,{}).get('Fees Generated','NA'), Metrics.get(table_selection,{}).get('Trades Completed','NA')]
     cols = st.columns(len(cols_titles))
