@@ -16,9 +16,9 @@ tables = {
         'NFTs Held': random.choices(['BAYC(1)','MAYC(1)','Doodles(1)','BAYC(6), Punk(2)', 'Punk(1), Azuki(1)', 'Azuki(2), Otherside(34)', 'MAYC(4)', 'Art Blocks(16)'], k=20),
         #'Last Transaction Date': pd.date_range(start='2023-06-01', periods=20),
         'Twitter': ['N/A', '**********', '**********', '**********'] * 5,
-        'Email': ['**********', 'N/A', '**********', '**********'] * 5,
-        'Telegram': ['**********', 'N/A', 'N/A', '**********'] * 5,
-        'Discord': ['**********', '**********', '**********', 'N/A'] * 5,
+        # 'Email': ['**********', 'N/A', '**********', '**********'] * 5,
+        # 'Telegram': ['**********', 'N/A', 'N/A', '**********'] * 5,
+        # 'Discord': ['**********', '**********', '**********', 'N/A'] * 5,
         #'LinkedIn': ['N/A', 'David Smith', 'N/A', 'Johnny Brown']*5
     },
 
