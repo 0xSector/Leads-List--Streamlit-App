@@ -99,9 +99,9 @@ Metrics = {
     'Derivatives Traders': {   
         'Total Users': '667,453',    
         'Total Fees Generated': '$281m',
-        'Starting Pricing': '25 for $100',     
-        'Average Value/Lead': '$46',     
-        'Estimated Profit Margin': '90%'   
+        'Estimated Profit Margin': '90%',     
+        'Average Value/Lead': '$46',      
+        'Starting Pricing': '25 / $100'
     },
 
     'NFT Lending Users': {     
@@ -109,9 +109,9 @@ Metrics = {
         # 'Total NFT Borrowers': 'TBD',
         'Total Users': '222,825',
         'Total Fees Generated': '$1.8m',
-        'Starting Pricing': '55 for $100',     
+        'Estimated Profit Margin': '90%',     
         'Average Value/Lead': 'TBD',     
-        'Estimated Profit Margin': '90%'   
+        'Starting Pricing': '55 / $100'
     }
 
     # 'Arrel Example Leads': {
@@ -182,8 +182,8 @@ def main():
 #     # Search for contact by address
 #     search_address = st.sidebar.text_input('Search for Contact by Address', value='0x...')
 
-    cols_titles = ['Total Users', 'Total Fees Generated', 'Starting Pricing', 'Average Value/Lead', 'Estimated Profit Margin']
-    cols_data = [Metrics.get(table_selection,{}).get('Total Users','NA'), Metrics.get(table_selection,{}).get('Total Fees Generated','NA'), Metrics.get(table_selection,{}).get('Starting Pricing','NA'), Metrics.get(table_selection,{}).get('Average Value/Lead','NA'), Metrics.get(table_selection,{}).get('Estimated Profit Margin','NA')]
+    cols_titles = ['Total Users', 'Total Fees Generated', 'Average Value/Lead', 'Estimated Profit Margin', 'Starting Pricing']
+    cols_data = [Metrics.get(table_selection,{}).get('Total Users','NA'), Metrics.get(table_selection,{}).get('Total Fees Generated','NA'), Metrics.get(table_selection,{}).get('Average Value/Lead','NA'), Metrics.get(table_selection,{}).get('Estimated Profit Margin','NA'), Metrics.get(table_selection,{}).get('Starting Pricing','NA')]
     #cols_titles = ['Total Wallets Tracked', 'Leads Available', 'Fees Generated', 'Trades Completed']
     #cols_data = [Metrics.get(table_selection,{}).get('Total Wallets Tracked','NA'), Metrics.get(table_selection,{}).get('Leads Available','NA'), Metrics.get(table_selection,{}).get('Fees Generated','NA'), Metrics.get(table_selection,{}).get('Trades Completed','NA')]
     cols = st.columns(len(cols_titles))
