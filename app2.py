@@ -65,7 +65,7 @@ def main():
     # Create a dropdown selector in the sidebar
     table_selection = st.sidebar.selectbox('Select Database', list(tables.keys()))
 
-    cols_titles = ['Total NFT Holders', 'Total NFT Borrowers': '8,484', 'Total Fees Generated', 'Average Value/Lead', 'Estimated Profit Margin', 'Starting Pricing']
+    cols_titles = ['Total NFT Holders', 'Total NFT Borrowers', 'Total Fees Generated', 'Average Value/Lead', 'Estimated Profit Margin', 'Starting Pricing']
     cols_data = [Metrics.get(table_selection,{}).get('Total NFT Holders','NA'), Metrics.get(table_selection,{}).get('Total NFT Borrowers','NA'), Metrics.get(table_selection,{}).get('Total Fees Generated','NA'), Metrics.get(table_selection,{}).get('Average Value/Lead','NA'), Metrics.get(table_selection,{}).get('Estimated Profit Margin','NA'), Metrics.get(table_selection,{}).get('Starting Pricing','NA')]
     #cols_titles = ['Total Wallets Tracked', 'Leads Available', 'Fees Generated', 'Trades Completed']
     #cols_data = [Metrics.get(table_selection,{}).get('Total Wallets Tracked','NA'), Metrics.get(table_selection,{}).get('Leads Available','NA'), Metrics.get(table_selection,{}).get('Fees Generated','NA'), Metrics.get(table_selection,{}).get('Trades Completed','NA')]
