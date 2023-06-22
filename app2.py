@@ -31,9 +31,9 @@ Metrics = {
         'Total NFT Holders': '222,825',    
         'Total NFT Borrowers': '8,484',
         #'Total Users': '222,825',
-        'Total Fees Generated': '$1.8m',
+        'Total Fees Generated': '$1.41m',
         'Estimated Profit Margin': '90%',   
-        'Average Value/Lead': 'TBD', 
+        'Average Value/Lead': '18', 
         'Starting Pricing': '50 / $100'
           
     }
