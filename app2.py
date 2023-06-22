@@ -34,7 +34,7 @@ Metrics = {
         'Total Fees Generated': '$1.8m',
         'Estimated Profit Margin': '90%',   
         'Average Value/Lead': 'TBD', 
-        'Starting Pricing': '55 Leads / $100'
+        'Starting Pricing': '55 Leads/$100'
           
     }
 
