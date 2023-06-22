@@ -72,7 +72,7 @@ def main():
     table_selection = st.sidebar.selectbox('Select Database', list(tables.keys()))
 
     cols_titles = ['Total Users', 'Total Fees Generated', 'Starting Pricing', 'Average Value/Lead', 'Estimated Profit Margin']
-    cols_data = [Metrics.get(table_selection,{}).get('Total Users','NA'), Metrics.get(table_selection,{}).get('Total Fees Generated','NA'), Metrics.get(table_selection,{}).get('Starting Pricing','NA'), Metrics.get(table_selection,{}).get('Average Value/Lead','NA'), Metrics.get(table_selection,{}).get('Estimated Profit Margin','NA')]
+    cols_data = [Metrics.get(table_selection,{}).get('Total Users','NA'), Metrics.get(table_selection,{}).get('Total Fees Generated','NA'), Metrics.get(table_selection,{}).get('Average Value/Lead','NA'), Metrics.get(table_selection,{}).get('Estimated Profit Margin','NA'), Metrics.get(table_selection,{}).get('Starting Pricing','NA')]
     #cols_titles = ['Total Wallets Tracked', 'Leads Available', 'Fees Generated', 'Trades Completed']
     #cols_data = [Metrics.get(table_selection,{}).get('Total Wallets Tracked','NA'), Metrics.get(table_selection,{}).get('Leads Available','NA'), Metrics.get(table_selection,{}).get('Fees Generated','NA'), Metrics.get(table_selection,{}).get('Trades Completed','NA')]
     cols = st.columns(len(cols_titles))
