@@ -101,7 +101,7 @@ Metrics = {
         'Total Fees Generated': '$281m',
         'Estimated Profit Margin': '90%',     
         'Average Value/Lead': '$46',      
-        'Starting Pricing': '25 / $100'
+        'Starting Pricing': '110 / $50'
     },
 
     'NFT Lending Users': {     
@@ -111,7 +111,7 @@ Metrics = {
         'Total Fees Generated': '$1.8m',
         'Estimated Profit Margin': '90%',     
         'Average Value/Lead': 'TBD',     
-        'Starting Pricing': '55 / $100'
+        'Starting Pricing': '130 / $50'
     }
 
     # 'Arrel Example Leads': {
