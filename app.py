@@ -114,7 +114,7 @@ tables = {
 
 Metrics = {
     'Gambling Users': {   
-        'Total Users': '75,385',    
+        'Total Users': '75K',    
         'Total Volume': '123M',
         'Estimated Profit Margin': 'TBD',     
         'Average Value/Lead': 'TBD',     
@@ -122,7 +122,7 @@ Metrics = {
     },
 
     'Derivatives Traders': {   
-        'Total Users': '667,453',    
+        'Total Users': '667K',    
         'Total Fees Generated': '$281m',
         'Estimated Profit Margin': '90%',     
         'Average Value/Lead': '$46',      
