@@ -209,7 +209,7 @@ def main():
 
     cols_titles = list(tables[table_selection].keys()) #['Total Users', 'Total Fees Generated', 'Average Value/Lead', 'Estimated Profit Margin', 'Starting Pricing']
     
-    cols_data = [Metrics.get(table_selection,{}).get(item,'NA') for item in cols_titles]
+    cols_data = [Metrics.get(table_selection,{}).get(item,'NA') for item in list(Metrics[table_selection].keys())]
     # cols_data = [
     #     Metrics.get(table_selection,{}).get('Total Users','NA'),
     #     Metrics.get(table_selection,{}).get('Total Fees Generated','NA'), 
