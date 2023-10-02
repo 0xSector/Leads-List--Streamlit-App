@@ -9,12 +9,12 @@ tables = {
     'Gambling Users': {
         'Wallet/User': ['0x' + ''.join(random.choices('0123456789ABCDEF', k=12))+ '.....' for _ in range(20)],
         'Wallet Value ($)': random.choices(range(1000, 10_000_000), k=20),
-        'Sites Used': random.choices(['Stake', 'Rollbit', 'Housebets', 'Roobet', 'Sportsbet', 'other'], k=20),
-        'Total Deposits': random.choices(range(100, 500_000), k=20),
-        'Avg Deposit': random.choices(range(300, 10000), k=20),
+        'Sites Used': random.choices(['Stake', 'Rollbit', 'Housebets', 'Roobet', 'Sportsbet', 'Stake, Rollbit', 'other'], k=20),
+        'Total Deposits ($)': random.choices(range(100, 500_000), k=20),
+        'Avg Deposit ($)': random.choices(range(300, 10000), k=20),
         '# of Deposits': random.choices(range(1, 50), k=20),
         '# of Chains Used': random.choices(range(1, 10), k=20),
-        'NFTs Held': random.choices(range(3, 50), k=20),
+        'Bluechip NFTs Held': random.choices(range(3, 50), k=20),
         'User Score': random.choices(range(1, 100), k=20),
         #'Last Transaction Date': pd.date_range(start='2023-06-01', periods=20),
         'Twitter': ['N/A', '**********', '**********', '**********'] * 5,
@@ -116,8 +116,8 @@ Metrics = {
     'Gambling Users': {   
         'Total Users': '75K',    
         'Total Deposits': '$123M',
-        # 'Estimated Profit Margin': 'TBD',     
-        # 'Average Value/Lead': 'TBD',     
+        # 'Most Pop On Chain': 'Decentral Games',     
+        # '': 'TBD',     
         # 'Starting Pricing': '100 / $50'
     },
 
