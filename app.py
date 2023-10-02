@@ -115,7 +115,7 @@ tables = {
 Metrics = {
     'Gambling Users': {   
         'Total Users': '75K',    
-        'Total Volume': '123M',
+        'Total Volume': '$123M',
         'Estimated Profit Margin': 'TBD',     
         'Average Value/Lead': 'TBD',     
         'Starting Pricing': '100 / $50'
