@@ -116,9 +116,9 @@ Metrics = {
     'Gambling Users': {   
         'Total Users': '75K',    
         'Total Deposits': '$123M',
-        'Estimated Profit Margin': 'TBD',     
-        'Average Value/Lead': 'TBD',     
-        'Starting Pricing': '100 / $50'
+        # 'Estimated Profit Margin': 'TBD',     
+        # 'Average Value/Lead': 'TBD',     
+        # 'Starting Pricing': '100 / $50'
     },
 
     'Derivatives Traders': {   
