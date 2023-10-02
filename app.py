@@ -207,9 +207,9 @@ def main():
 #     # Search for contact by address
 #     search_address = st.sidebar.text_input('Search for Contact by Address', value='0x...')
 
-    cols_titles = list(tables[table_selection].keys()) #['Total Users', 'Total Fees Generated', 'Average Value/Lead', 'Estimated Profit Margin', 'Starting Pricing']
-    
-    cols_data = [Metrics.get(table_selection,{}).get(item,'NA') for item in list(Metrics[table_selection].keys())]
+    cols_titles = list(Metrics[table_selection].keys()) #['Total Users', 'Total Fees Generated', 'Average Value/Lead', 'Estimated Profit Margin', 'Starting Pricing']
+
+    # cols_data = [Metrics.get(table_selection,{}).get(item,'NA') for item in cols_titles]
     # cols_data = [
     #     Metrics.get(table_selection,{}).get('Total Users','NA'),
     #     Metrics.get(table_selection,{}).get('Total Fees Generated','NA'), 
@@ -221,9 +221,9 @@ def main():
     #cols_data = [Metrics.get(table_selection,{}).get('Total Wallets Tracked','NA'), Metrics.get(table_selection,{}).get('Leads Available','NA'), Metrics.get(table_selection,{}).get('Fees Generated','NA'), Metrics.get(table_selection,{}).get('Trades Completed','NA')]
     cols = st.columns(len(cols_titles))
 
-    for i in range(len(cols_titles)):
+    for i, ct in enumerate(cols_titles):
         with cols[i]:
-            st.metric(label=cols_titles[i], value=cols_data[i])
+            st.metric(label=ct, value=Metrics.get(table_selection,{}).get(ct,'NA'))
 
     
 
