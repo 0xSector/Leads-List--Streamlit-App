@@ -9,13 +9,13 @@ tables = {
     'Gambling Users': {
         'Wallet/User': ['0x' + ''.join(random.choices('0123456789ABCDEF', k=12))+ '.....' for _ in range(20)],
         'Wallet Value ($)': random.choices(range(1000, 10_000_000), k=20),
-        'Sites Used': random.choices(['Stake', 'Rollbit', 'Housebets', 'Roobet', 'Sportsbet', 'Stake, Rollbit', 'other'], k=20),
+        'Sites Used': random.choices(['Stake', 'Rollbit', 'Housebets', 'Roobet', 'Sportsbet', 'Stake, Rollbit'], k=20),
         'Total Deposits ($)': random.choices(range(100, 500_000), k=20),
         'Avg Deposit ($)': random.choices(range(300, 10000), k=20),
         '# of Deposits': random.choices(range(1, 50), k=20),
         '# of Chains Used': random.choices(range(1, 10), k=20),
         'Bluechip NFTs Held': random.choices(range(3, 50), k=20),
-        'User Score': random.choices(range(1, 100), k=20),
+        # 'User Score': random.choices(range(1, 100), k=20),
         #'Last Transaction Date': pd.date_range(start='2023-06-01', periods=20),
         'Twitter': ['N/A', '**********', '**********', '**********'] * 5,
         # 'Email': ['**********', 'N/A', '**********', '**********'] * 5,
@@ -219,11 +219,11 @@ def main():
     # ]
     #cols_titles = ['Total Wallets Tracked', 'Leads Available', 'Fees Generated', 'Trades Completed']
     #cols_data = [Metrics.get(table_selection,{}).get('Total Wallets Tracked','NA'), Metrics.get(table_selection,{}).get('Leads Available','NA'), Metrics.get(table_selection,{}).get('Fees Generated','NA'), Metrics.get(table_selection,{}).get('Trades Completed','NA')]
-    cols = st.columns(len(cols_titles))
+    # cols = st.columns(len(cols_titles))
 
-    for i, ct in enumerate(cols_titles):
-        with cols[i]:
-            st.metric(label=ct, value=Metrics.get(table_selection,{}).get(ct,'NA'))
+    # for i, ct in enumerate(cols_titles):
+    #     with cols[i]:
+    #         st.metric(label=ct, value=Metrics.get(table_selection,{}).get(ct,'NA'))
 
     
 
