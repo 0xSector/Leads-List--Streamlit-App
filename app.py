@@ -6,6 +6,24 @@ import random
 
 # Define the tables
 tables = {
+    'Gambling Users': {
+        'Wallet/User': ['0x' + ''.join(random.choices('0123456789ABCDEF', k=12))+ '.....' for _ in range(20)],
+        'Wallet Value ($)': random.choices(range(1000, 10_000_000), k=20),
+        'Sites Used': random.choices(['Stake', 'Rollbit', 'Housebets', 'Roobet', 'other'], k=20),
+        'PnL ($)': random.choices(range(-50_000, 50_000), k=20),
+        'Fees ($)': random.choices(range(1, 1700), k=20),
+        'Volume ($)': random.choices(range(100, 10_000_000), k=20),
+        'Deposits': random.choices(range(1, 500), k=20),
+        'User Score': random.choices(range(1, 100), k=20),
+        'Chain Activity': random.choices(range(1, 10), k=20),
+        #'Last Transaction Date': pd.date_range(start='2023-06-01', periods=20),
+        'Twitter': ['N/A', '**********', '**********', '**********'] * 5,
+        # 'Email': ['**********', 'N/A', '**********', '**********'] * 5,
+        # 'Telegram': ['**********', 'N/A', 'N/A', '**********'] * 5,
+        # 'Discord': ['**********', '**********', '**********', 'N/A'] * 5,
+        #'linkedin': ['N/A', 'N/A', '**********', '**********'] * 5
+    },
+
     'Derivatives Traders': {
         'Wallet/User': ['0x' + ''.join(random.choices('0123456789ABCDEF', k=12))+ '.....' for _ in range(20)],
         'Wallet Value ($)': random.choices(range(1000, 10000000), k=20),
@@ -95,6 +113,13 @@ tables = {
 }
 
 Metrics = {
+    'Gambling Users': {   
+        'Total Users': '75,385',    
+        'Total Volume': '123M',
+        'Estimated Profit Margin': 'TBD',     
+        'Average Value/Lead': 'TBD',     
+        'Starting Pricing': '100 / $50'
+    },
 
     'Derivatives Traders': {   
         'Total Users': '667,453',    
@@ -182,8 +207,16 @@ def main():
 #     # Search for contact by address
 #     search_address = st.sidebar.text_input('Search for Contact by Address', value='0x...')
 
-    cols_titles = ['Total Users', 'Total Fees Generated', 'Average Value/Lead', 'Estimated Profit Margin', 'Starting Pricing']
-    cols_data = [Metrics.get(table_selection,{}).get('Total Users','NA'), Metrics.get(table_selection,{}).get('Total Fees Generated','NA'), Metrics.get(table_selection,{}).get('Average Value/Lead','NA'), Metrics.get(table_selection,{}).get('Estimated Profit Margin','NA'), Metrics.get(table_selection,{}).get('Starting Pricing','NA')]
+    cols_titles = list(tables[table_selection].keys()) #['Total Users', 'Total Fees Generated', 'Average Value/Lead', 'Estimated Profit Margin', 'Starting Pricing']
+    
+    cols_data = [Metrics.get(table_selection,{}).get(item,'NA') for item in cols_titles]
+    # cols_data = [
+    #     Metrics.get(table_selection,{}).get('Total Users','NA'),
+    #     Metrics.get(table_selection,{}).get('Total Fees Generated','NA'), 
+    #     Metrics.get(table_selection,{}).get('Average Value/Lead','NA'), 
+    #     Metrics.get(table_selection,{}).get('Estimated Profit Margin','NA'), 
+    #     Metrics.get(table_selection,{}).get('Starting Pricing','NA')
+    # ]
     #cols_titles = ['Total Wallets Tracked', 'Leads Available', 'Fees Generated', 'Trades Completed']
     #cols_data = [Metrics.get(table_selection,{}).get('Total Wallets Tracked','NA'), Metrics.get(table_selection,{}).get('Leads Available','NA'), Metrics.get(table_selection,{}).get('Fees Generated','NA'), Metrics.get(table_selection,{}).get('Trades Completed','NA')]
     cols = st.columns(len(cols_titles))
